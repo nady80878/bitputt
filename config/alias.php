@@ -7,4 +7,5 @@ return [
 	'Input' => 'App\Libs\Statics\Input',
 	'Session' => 'App\Libs\Statics\Session',
 	'Token' => 'App\Libs\Statics\Token',
+	'Info' => 'App\Libs\Statics\Info',
 ];

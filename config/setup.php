@@ -5,7 +5,7 @@ return [
 		'host' => '127.0.0.1',
 		'username' => 'root',
 		'password' => '',
-		'db' => 'login_register',
+		'db' => 'coolcode',
 	],
 	'remember' => [
 		'cookie_name' => 'hash',
@@ -15,5 +15,5 @@ return [
 		'session_name' => 'user',
 		'token_name' => '_token',
 	],
-	'url' =>  'http://localhost/yadawi/',
+	'url' =>  'http://localhost/coolcode/',
 ];

@@ -2,17 +2,24 @@
 
 class Input{
 
-	public static function exists($type = 'post'){
-		switch($type){
-			case 'post' :
-				 return ($_POST)? true : false;
-			break;
-			case 'get' :
-				return ($_GET)? true : false;
-			break;
-			default : 
-				return false;
-		}
+	public static function isPost()
+	{
+		 return ($_POST && !self::has('_method'))? true : false;
+	}
+
+	public static function isGet()
+	{
+		return ($_GET && !self::has('_method'))? true : false;
+	}
+
+	public static function isPut()
+	{
+		return (self::isPost() && self::get('_method') === 'PUT')? true : false;
+	}
+
+	public static function isDelete()
+	{
+		return (self::isPost() && self::get('_method') === 'DELETE')? true : false;
 	}
 
 	public static function get($item){

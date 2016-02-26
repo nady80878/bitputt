@@ -2,212 +2,116 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Yadawi | <?php echo $pagename ;?></title>
-	<link rel="stylesheet" type="text/css" href="<?php echo Url::css($pagename);?>" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Url::css('header');?>" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Url::css('font-awesome.min');?>" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Url::css('normalize');?>" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Url::css('footer');?>" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Url::css('jquery.raty');?>" />
-	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
-	<link rel="shortcut icon"
-	href="<?php echo Url::img('coolcode logo.png');?>" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="HTML,HTML5,CSS,CSS3,php,photoshop , java ,web ,desien develop , c++ , qt , wushu,karate,wing chun , karate , taekwondo , taekunger , courses , c#  , c++ , windows phone , python , javaScript , jquery , desktop , mobile , android , java me"/>
+	<meta name="description" content=" this website enables you have pick up any courses at any fields with an easy and flexible way 
+	which help you to prepare your self for any work , also provides courses for all athelets and sports men at any sports you need 
+	every thing is free , go a head with your field (programming  , management , sports , ...etc)"/> 
+	<meta name="subject" content="free courses in all fields"> 
+	<meta name="language" content="EN">
+	<meta name="designer" content="nady shalaby">
+	<meta name="copyright" content="taekung technologies"> 
+	<meta name="reply-to" content="nady80878@gmail.com">
+	<meta name="owner" content="nady shalaby">
+	<meta name="url" content="http://www.geeknology.netii.net">
+	<meta name="og:url" content="http://www.www.geeknology.netii.net"/>
+	<meta name="og:image" content="<?php echo Url::img('coolcode.png');?>"/>
+	<link rel="stylesheet" href="<?php echo Url::css($pagename);?>" />
+	<link rel="stylesheet" href="<?php echo Url::css('responsive');?>" />
+	<link rel="stylesheet" href="<?php echo Url::css('font-awesome');?>" />
+	<link rel="stylesheet" href="<?php echo Url::css('header');?>" />
+	<link rel="stylesheet" href="<?php echo Url::css('footer');?>" />
+	<link rel="stylesheet" href="<?php echo Url::css('animate');?>" />
+	<link rel="shortcut icon" type="image/png" href="<?php echo Url::img('coolcode.png');?>" />
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<title>CoolCode | <?php echo ucfirst($pagename) ;?></title>
 </head>
 <body>
-	<div class="main-bar clear">
-		<h1>Call us: <span>(800) 2345-6789</span> </h1>
-		<div class="page-setup">
-			<ul>
-				<li>
-					<div id="google_translate_element"></div>
-				</li>
-				<li>
-					<select name="cur">
-						<option value="pound">Pound</option>
-						<option value="dolar">Dolar</option>
-					</select>
-				</li>
-			</ul>	
-		</div>
-	</div>
-	<div class="cart-bin">
-		<div class="cart-block-key">
-			<div class="cart-img"><img src="<?php echo Url::img('cart-icon.png')?>" alt=""></div>	
-		</div>
-		<div class="cart-main-info clear">
-			<div class="cart-subtotal">
-				Subtotal: <span class="subtotal-money">$6812</span>
-			</div>		
-			<div class="cart-items-num">
-				Cart Items: <span class="item-num">6</span>
+<div class="container-fluid">
+	<div class="sign-wrapper">
+		<div class="sign-box row">
+			<span class="close"><i class="fa fa-times"></i></span>
+			<div class="sign-up col-md-6">
+				<form action="register" method="post" accept-charset="utf-8">
+					<div class="field">
+						<label for="username" class="field-lbl">Username:</label>
+						<div class="field-txt"><input id="username" name="username" type="text"></div>
+					</div>
+					<div class="field">
+						<label for="email" class="field-lbl">Email:</label>
+						<div class="field-txt"><input id="email" name="email" type="email"></div>
+					</div>
+					<div class="field">
+						<label for="password" class="field-lbl">Password:</label>
+						<div class="field-txt"><input id="password" name="password" type="password"></div>
+					</div>
+					<div class="field">
+						<label for="confPassword" class="field-lbl">Conf-Password: </label>
+						<div class="field-txt"><input id="confPassword" name="confPassword" type="password"></div>
+					</div>
+					<div class="gender">
+						<label for="male">
+							<input type="radio" id="male" name="gender" value="male"> 
+							<i class="fa fa-male fa-lg"></i>
+						</label>
+						<label for="female">
+							<input type="radio" id="female" name="gender" value="female"> 
+							<i class="fa fa-female fa-lg"></i>
+						</label>
+					</div>
+					<div class="submit-box">
+						<button type="submit" class="submit-btn"><i class="fa fa-pencil-square-o"></i> Register</button>
+					</div>
+					<input type="hidden" name="_token" value="<?php echo Token::generate(); ?>">
+				</form>
 			</div>
-		</div>
-		<div class="cart-items">
-			
-			<div class="cart-item">
-				<div class="cart-item-controls">
-					<span class="edit fa fa-pencil"></span>
-					<span class="close fa fa-times"></span>
-				</div>
-				<div class="cart-item-content">
-					<div class="cart-item-img">
-						<img src="<?php echo Url::img('product.png')?>" alt="">				
+			<div class="sign-in col-md-6">
+				<form action="login" method="post" accept-charset="utf-8">
+					<div class="field">
+						<label for="user-email" class="field-lbl">Username | Email:</label>
+						<div class="field-txt"><input id="user-email" name="username" type="text"></div>
 					</div>
-					<div class="cart-item-label">
-						Sample Cart Item
+					<div class="field clear">
+						<label for="password2" class="field-lbl">Password:</label>
+						<div class="field-txt"><input id="password2" name="password" type="password"></div>
 					</div>
-					<div class="cart-item-num">
-						3 X <span class="cart-item-money">$987</span>
+					<div class="field">
+						<label class="remember" for="remember">
+							<input type="checkbox" id="remember" name="remember">
+							Remember me next time !
+						</label>
 					</div>
-				</div>
-			</div>
-			<div class="cart-item">
-				<div class="cart-item-controls">
-					<span class="edit fa fa-pencil"></span>
-					<span class="close fa fa-times"></span>
-				</div>
-				<div class="cart-item-content">
-					<div class="cart-item-img">
-						<img src="<?php echo Url::img('product.png')?>" alt="">				
+					<div class="submit-box">
+						<a href="forgetpassword">Forgot my password?</a> &nbsp;<button type="submit" class="submit-btn"><i class="fa fa-sign-in"></i> Login</button>
 					</div>
-					<div class="cart-item-label">
-						Sample Cart Item
-					</div>
-					<div class="cart-item-num">
-						3 X <span class="cart-item-money">$987</span>
-					</div>
-				</div>
-			</div>
-			<div class="cart-item">
-				<div class="cart-item-controls">
-					<span class="edit fa fa-pencil"></span>
-					<span class="close fa fa-times"></span>
-				</div>
-				<div class="cart-item-content">
-					<div class="cart-item-img">
-						<img src="<?php echo Url::img('product.png')?>" alt="">				
-					</div>
-					<div class="cart-item-label">
-						Sample Cart Item
-					</div>
-					<div class="cart-item-num">
-						3 X <span class="cart-item-money">$987</span>
-					</div>
-				</div>
-			</div>
-			<div class="cart-item">
-				<div class="cart-item-controls">
-					<span class="edit fa fa-pencil"></span>
-					<span class="close fa fa-times"></span>
-				</div>
-				<div class="cart-item-content">
-					<div class="cart-item-img">
-						<img src="<?php echo Url::img('product.png')?>" alt="">				
-					</div>
-					<div class="cart-item-label">
-						Sample Cart Item
-					</div>
-					<div class="cart-item-num">
-						3 X <span class="cart-item-money">$987</span>
-					</div>
-				</div>
-			</div>
-			<div class="cart-item">
-				<div class="cart-item-controls">
-					<span class="edit fa fa-pencil"></span>
-					<span class="close fa fa-times"></span>
-				</div>
-				<div class="cart-item-content">
-					<div class="cart-item-img">
-						<img src="<?php echo Url::img('product.png')?>" alt="">				
-					</div>
-					<div class="cart-item-label">
-						Sample Cart Item
-					</div>
-					<div class="cart-item-num">
-						3 X <span class="cart-item-money">$987</span>
-					</div>
-				</div>
-			</div>
-			<div class="cart-item">
-				<div class="cart-item-controls">
-					<span class="edit fa fa-pencil"></span>
-					<span class="close fa fa-times"></span>
-				</div>
-				<div class="cart-item-content">
-					<div class="cart-item-img">
-						<img src="<?php echo Url::img('product.png')?>" alt="">				
-					</div>
-					<div class="cart-item-label">
-						Sample Cart Item
-					</div>
-					<div class="cart-item-num">
-						3 X <span class="cart-item-money">$987</span>
-					</div>
-				</div>
+					<input type="hidden" name="_token" value="<?php echo Token::generate(); ?>">
+				</form>
 			</div>
 		</div>
 	</div>
-	<div class="container clear">
-
-		<header class="header-body">
-			<div class="error">
-				<ul class="msg">
-					<?php echo Session::flash ( 'error' ); ?>
-				</ul>
-			</div>
-			<div class="header-content clear">
-				<div class="logo"><img src="<?php echo Url::img('yadawi.png')?>" alt="Markitya Logo"/></div>
-				<div class="main-wedgits">
-
-					<div class="links">
-						<a href="#" class="user-avatar"><img class="user-avatar-img" src="<?php echo Url::img('user.png')?>" alt=""></a>
-						<h4>Welcome <span class="user-fullname">to our online store !</span></h4>
-						<navbar>
-							<ul>
-								
-								<span class="user-controls">
-									<?php //if(Session::exist('username') && Session::exist("login")){?>
-										<li><a href="<?php //echo URL.'profile/user/'.Session::get('username').'/'.Session::get('login');?>" title="My account" class="user-account">My account</a></li>
-										<li><a href="<?php //echo URL;?>logout" title="Logout" class="logout-btn">Logout</a></li>			
-									<?php //}else{?>
-										<li><a href="#" title="Sign-up" class="signup-btn">Sign-up</a></li>
-										<li><a href="#" title="Login" class="login-btn">Login</a></li>
-									<?php //} ?>
-								</span>
-							</ul>
-						</navbar>						
-					</div>
-					<div class="search">
-						<form action="<?php //echo URL; ?>search" method="get" accept-charset="utf-8">
-							<input type="text" name="q" spellcheck="false" class="search-field" placeholder="Search your mind ...">
-							<button type="submit" class="search-btn"><span class="fa fa-search"></span></button>
-						</form>
+	<header class="banner row box clear">
+		<nav>
+			<div class="navbar container-fluid">
+				<div class="container">
+					<div class="logo"><a href="<?php echo Url::base();?>"><img src="<?php echo Url::img('coolcode.png'); ?>" alt=""></a></div>
+					<div class="links-box">
+						<ul class="links">
+							<li class="link"><a href=""><i class="fa fa-home"></i> Home</a></li>
+							<li class="link"><a href=""><i class="fa fa-product-hunt"></i> Profolio</a></li>
+							<li class="link"><a href=""><i class="fa fa-whatsapp"></i> Contact</a></li>
+							<li class="link"><a href=""><i class="fa fa-question-circle"></i> About</a></li>
+							<li class="link"><a href=""><i class="fa fa-user"></i> Profile</a></li>
+							<li class="link"><a href="" class="sign"><i class="fa fa-user-plus"></i> Sign(in,up)</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
-			<div class="navbar">
-				<ul class="menu clear">
-					<li class="home"><a href="<?php echo Url::getUrl('home'); ?>" >home</a></li>
-					<li class="articles"><a href="<?php echo Url::getUrl('articles'); ?>" >articles &nbsp;<i class="fa fa-caret-down"></i></a>
-						<ul class="sub-menu">
-							<li><a href="">item one</a></li>
-							<li><a href="">item two</a></li>
-							<li><a href="">item three</a></li>
-							<li><a href="">item four</a></li>
-						</ul>
-					</li>
-					<li class="accessories"><a href="<?php echo Url::getUrl('accessories'); ?>" >accessories</a></li>
-					<li class="decoration"><a href="<?php echo Url::getUrl('decoration'); ?>" >decoration</a></li>
-					<li class="upload-product"><a href="<?php echo Url::getUrl('articles'); ?>" >upload product &nbsp;<i class="fa fa-caret-down"></i></a>
-						<ul class="sub-menu">
-							<li><a href="">make special order</a></li>
-							<li><a href="">publish new product</a></li>
-						</ul>
-					</li>
-					<li class="about"><a href="<?php echo Url::getUrl('about'); ?>" >about</a></li>
-				</ul>
-			</div>
-		</header>
+		</nav>
+	</header>
+
+	

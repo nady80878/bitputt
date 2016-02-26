@@ -14,7 +14,8 @@
 		"facebook/php-sdk-v4": "^5.1",
 		"google/apiclient": "1.0.*@beta",
 		"swiftmailer/swiftmailer": "^5.4",
-		 "raveren/kint": "^1.0"
+		 "raveren/kint": "^1.0",
+		"browscap/browscap-php": "^2.1"
 	},
 
 	"autoload": {
